@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Buttons({ isdarkmode, todos, setFilteredTodos }) {
-    const [activeButton, setActiveButton] = useState("All");
+function Buttons({ isdarkmode, todos, setFilteredTodos, activeButton, setActiveButton }) {
 
     useEffect(() => {
         if (activeButton === "All") {

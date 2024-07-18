@@ -1,11 +1,17 @@
-import check from "./assets/icon-check.svg";
-import cross from "./assets/icon-cross.svg";
+import check from "/icon-check.svg";
+import cross from "/icon-cross.svg";
 
-function Todo({ isdarkmode, todo, todos, setTodos, index }) {
+function Todo({ isdarkmode, todo, todos,setTodos, index , activeButton}) {
+
     const handleCheck = () => {
+    if (activeButton !== "All") {
+        alert('You can only check or uncheck items in the "All" section.');
+        return;
+        }
         const newTodos = [...todos];
         newTodos[index].ischecked = !newTodos[index].ischecked;
         setTodos(newTodos);
+
     }
 
     const styles = {

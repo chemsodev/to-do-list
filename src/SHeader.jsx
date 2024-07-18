@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import sun from "./assets/icon-sun.svg";
-import moon from "./assets/icon-moon.svg";
-import add from "./assets/plus.svg";
+import sun from "/icon-sun.svg";
+import moon from "/icon-moon.svg";
+import add from "/plus.svg";
 
 function SHeader({ isdarkmode, setDarkmode, todos, setTodos, newtodo, setNewtodo }) {
   const handleDarkMode = () => {

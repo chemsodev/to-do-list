@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Todo from './Todo';
 import Buttons from './Buttons';
 
-function Stodos({ isdarkmode, todos, counttodos,  setTodos, setFilteredTodos }) {
+function Stodos({ isdarkmode, todos, counttodos,  setTodos, setFilteredTodos, activeButton, setActiveButton }) {
     const [draggingIndex, setDraggingIndex] = useState(-1);
 
     const handleDragStart = (index) => {
@@ -49,6 +49,7 @@ function Stodos({ isdarkmode, todos, counttodos,  setTodos, setFilteredTodos }) 
                             index={index}
                             todos={todos}
                             setTodos={setTodos}
+                            activeButton={activeButton}
                         />
                     </div>
                 ))}
@@ -62,6 +63,8 @@ function Stodos({ isdarkmode, todos, counttodos,  setTodos, setFilteredTodos }) 
                         isdarkmode={isdarkmode}
                         todos={counttodos}
                         setFilteredTodos={setFilteredTodos}
+                        activeButton={activeButton}
+                        setActiveButton={setActiveButton}
                     />
                 </div>
                 <button onClick={() => setTodos(prevTodos => prevTodos.filter(todo => !todo.ischecked))}>

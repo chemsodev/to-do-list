@@ -3,14 +3,16 @@ import SHeader from "./SHeader";
 import Stodos from "./Stodos";
 import Buttons from "./Buttons";
 import "./index.css";
-import noitemsdark from "./assets/noitemsd.svg";
-import noitemslight from "./assets/noitemsl.svg";
+import noitemsdark from "/noitemsd.svg";
+import noitemslight from "/noitemsl.svg";
 
 function App() {
   const [darkmode, setDarkmode] = useState(true);
   const [todos, setTodos] = useState([]);
   const [newtodo, setNewtodo] = useState("");
   const [filteredTodos, setFilteredTodos] = useState(todos);
+  const [activeButton, setActiveButton] = useState("All");
+
 
   return (
     <div
@@ -32,6 +34,8 @@ function App() {
           counttodos={todos}
           setTodos={setTodos}
           setFilteredTodos={setFilteredTodos}
+          activeButton={activeButton}
+          setActiveButton={setActiveButton}
           className="mb-44"
         />
       {filteredTodos.length === 0 ? (
@@ -57,6 +61,8 @@ function App() {
           isdarkmode={darkmode}
           todos={todos}
           setFilteredTodos={setFilteredTodos}
+          activeButton={activeButton}
+          setActiveButton={setActiveButton}
         />
         </div>
         <div className="flex flex-col items-center ">
