@@ -35,10 +35,10 @@ export default {
         'josefin-sans': ['Josefin Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'mobile-dark': "url('./bg-mobile-dark.JPG')",
-        'mobile-light': "url('./bg-mobile-light.JPG')",
-        'desktop-dark': "url('./bg-desktop-dark.JPG')",
-        'desktop-light': "url('./bg-desktop-light.JPG')",
+        'mobile-dark': "url('/bg-mobile-dark.jpg')",
+        'mobile-light': "url('/bg-mobile-light.jpg')",
+        'desktop-dark': "url('/bg-desktop-dark.jpg')",
+        'desktop-light': "url('/bg-desktop-light.jpg')",
       },
       letterSpacing: {
         'wide': '.3125em',
