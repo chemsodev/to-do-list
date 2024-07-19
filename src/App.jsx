@@ -42,7 +42,7 @@ function App() {
         darkmode ? (
           <div className="w-full h-7 flex flex-col items-center text-dark-light-grayish-blue font-bold ">
             
-            <img src={noitemsdark} alt="no items" className="w-60 mt-32 absolute bottom-96" />
+            <img src={noitemsdark} alt="no items" className="w-60 mt-32" />
             <span>No Items...</span>
           </div>
         ) : (
