@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SHeader from "./SHeader";
 import Stodos from "./Stodos";
 import Buttons from "./Buttons";
@@ -8,11 +8,14 @@ import noitemslight from "/noitemsl.svg";
 
 function App() {
   const [darkmode, setDarkmode] = useState(true);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
   const [newtodo, setNewtodo] = useState("");
   const [filteredTodos, setFilteredTodos] = useState(todos);
   const [activeButton, setActiveButton] = useState("All");
 
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <div
@@ -75,3 +78,4 @@ function App() {
 }
 
 export default App;
+
