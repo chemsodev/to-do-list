@@ -10,7 +10,7 @@ function SHeader({ isdarkmode, setDarkmode, todos, setTodos, newtodo, setNewtodo
   };
 
   const handleAddTodo = () => {
-    if (newtodo.trim() !== "" && todos.length < 8) {
+    if (newtodo.trim() !== "") {
       setTodos((prevTodos) => [...prevTodos, { text: newtodo, ischecked: false }]);
     }
     setNewtodo("");
