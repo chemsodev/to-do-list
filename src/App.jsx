@@ -43,7 +43,7 @@ function App() {
         />
       {filteredTodos.length === 0 ? (
         darkmode ? (
-          <div className="w-full h-7 flex flex-col items-center text-dark-light-grayish-blue font-bold ">
+          <div className="w-full h-7 flex flex-col items-center font-bold text-light-very-dark-grayish-blue absolute bottom-96">
             
             <img src={noitemsdark} alt="no items" className="w-60 mt-32" />
             <span>No Items...</span>
